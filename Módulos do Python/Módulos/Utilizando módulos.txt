@@ -1,0 +1,8 @@
+Os módulos servem para adicionar outras partes ao python
+A linguagem trabalha a partir de pacotes e módulos instaláveis e outros já pré-definidos
+Colocar bibliotecas para fazer funcionalidades específicas, fazer importações
+pra isso usa o comando import nas pimeiras linhas do código e ele vai importar os códigos da biblioteca que você colocou o nome. Dessa maneira (import nome da biblioteca) importa todos os comandos da biblioteca, se eu quiser só importar um comando específico daí uso from nome da biblioteca import comando que quer importar
+Uma bilioteca importante é a biblioteca math (geralmente já vem instalada) que traz funções matemáticas extras, como o comando ceil (arredonda pra cima) e o floor (arredonda pra baixo), trunc (truncar o número elimina da vírgula pra frente), pow (potência), sqrt (raiz quadrada), factorial (cálculo de fatorial)
+Então quando escrevo import math ele vai importar todas essa funcionalidades e muitas outras
+se eu quiser só por exemplo raiz quadrada, então from math import sqrt e se quiser mais uma, coloca vírgula no final e escreve a outra sqrt, factorial
+Sempre consultar o python.org pra ver as bibliotecas

@@ -1,0 +1,23 @@
+1982 na Holanda no CWI (Centro de matemática e ciências da computação)
+Foram criadas algumas linguagens de progamação lá
+Guido Van Hossum - criou a linguagem python pra ser uma adaptação, uma linguagem
+simples e que pudesse adaptar um programa de C pra linguagem abc(que ele tava
+trabalhando). O nome surgiu em homenagem a um programa de comédia da época, mas
+ficou marcado mesmo à cobra píton que em inglês é python.
+Em 1995 ele cria o CP4E pra ensinar as pessoas a programar
+Em 2001 veio a Python Software Foundation
+O Linux já vem instalado com python
+RaspberryPi (é tipo um arduíno só que pra Python) - nele é possível
+instalar sistemas operacionais
+Python é uma linguagem de propósito geral, pra várias funções
+é fácil, simples e intuitivo, multiplataforma (funciona em vários sistemas
+operacionais diferentes), 
+ela é batterie included já vem muita coisa instalada.
+ela é totalmente livre e organizada, a posição dos códigos tem que ser
+bem organizada. Tudo é orientado a objeto e tem muitas bibliotecas.
+O python suporte números muito grandes, pode ser utilizado pra inteligência
+artificial, biotecnologia e computação 3D
+Ele está presente em indústrias de filmes (renderização gráfica), programas
+como o blender, o gimp... No youtube, no google... Em vários jogos
+Interpretador (as linguagens de programação) transformam nossa forma de se 
+comunicar em linguagem de máquina
