@@ -30,12 +30,12 @@ class CaixaAcoplada():
 			time.sleep(0.8)
 		if(self._nivel_agua<self._nivel_minimo):
 			self._nivel_agua=self._nivel_minimo
-		print("Nivel da água: {:.2f}".format(self._nivel_agua))
+		print("\tNivel da água: {:.2f}".format(self._nivel_agua))
 		self._encher()
 		self._alavanca._incremento_contador()
 
 	def _encher(self):
-		print("Caixa ennchendo")
+		print("\nCaixa ennchendo")
 		self._comporta._fecharComporta()
 		self._valvula._abrirValvula()
 		'''
