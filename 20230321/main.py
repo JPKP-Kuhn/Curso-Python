@@ -1,5 +1,5 @@
 #coding: utf-8
-
+#Funcionamento de uma Caixa acoplada de Vaso sanitário
 #from CaixaAcoplada import *
 import CaixaAcoplada as CA
 
