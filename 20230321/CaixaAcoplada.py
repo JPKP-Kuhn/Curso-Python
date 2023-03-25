@@ -20,14 +20,14 @@ class CaixaAcoplada():
 
 	def _descarga(self):
 		#pass
-		print("\tDescarga pressionada.")
+		print("\t\nDescarga pressionada.")
 		self._alavanca._set_status("Aberto")
-		print("Status = ", self._alavanca._get_status())
+		print("\nStatus da Alavanca de acionamento = ", self._alavanca._get_status())
 		self._comporta._abrirComporta()
 		while(self._nivel_agua>self._nivel_minimo):
-			print("Nivel da água: {:.2f}".format(self._nivel_agua))
+			print("\tNivel da água: {:.2f}".format(self._nivel_agua))
 			self._nivel_agua -= self._comporta._vazao_saida
-			time.sleep(0.4)
+			time.sleep(0.8)
 		if(self._nivel_agua<self._nivel_minimo):
 			self._nivel_agua=self._nivel_minimo
 		print("Nivel da água: {:.2f}".format(self._nivel_agua))
@@ -35,7 +35,7 @@ class CaixaAcoplada():
 		self._alavanca._incremento_contador()
 
 	def _encher(self):
-		print("Encher")
+		print("Caixa ennchendo")
 		self._comporta._fecharComporta()
 		self._valvula._abrirValvula()
 		'''
