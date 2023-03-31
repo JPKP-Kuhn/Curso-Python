@@ -4,13 +4,15 @@ from playsound import playsound
 
 #EX 01
 n1 = float(input('Digite um número Real: '))
-print(math.floor(n1))
+print(f'O valor digitado foi {n1}, sua porção inteira é: ', math.floor(n1))
+#também poderia utilizar o math.trunc(n1), ou sem importar colocar int(n1)
 
 #EX 02 Teorema de Pitágoras
 cat1 = int(input('Digite o primeiro cateto: '))
 cat2 = int(input('Digite o segundo cateto: '))
 hip = cat1**2 + cat2**2
 print(hip**(1/2))
+#Usando o método math - hip = math.hypot(co, ca)
 
 #EX 03 seno, cosseno e tangente
 angulo = int(input('Digite um ângulo: '))
