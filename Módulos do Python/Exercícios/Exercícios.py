@@ -29,9 +29,11 @@ alunos.append(input('Segundo aluno: '))
 alunos.append(input('Terceiro aluno: '))
 alunos.append(input('Quarto aluno: '))
 print(random.choice(alunos))
+#ou definir primeiro os alunos, inserí-los no array e daí o random.choice
 
 #EX 05 sorteio ordem de apresentação dos alunos do EX 04
 print(random.sample(alunos, k=len(alunos)))
+#random.shuffle embaralha a lista, depois é só print(lista)
 
 #EX 06 tocar arquivo .mp3
 playsound('asd052_03_Brainwave_(Mike-McGuill).mp3')
