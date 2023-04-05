@@ -1,0 +1,29 @@
+Bom dia  --> Pra uma linguagem de programção qualquer frase é uma cadeia de caracteres, string, cadeia de texto. Fica entre '' ou ""
+Como manipular string
+
+frase = 'Bom dia'
+Cada caractere é guardado num índice, um número sequencial pra caber todos os caracteres, incluindo espaços, começa do 0
+
+Fatiar uma string é pegar pedaços dela
+frase[3] vai pegar da lista o caractere que é um m minúsculo
+frase[2:6] vai pegar os caracteres do 2 até o 5, range (o último é desconsiderado)
+frase[2:8:2] vai pegar até o 7 e o terceio é poque vai pulando de dois em dois
+frase[:5] começará do caractere 0 e vai até o 4
+frase[5:] agora começa do 5 e vai até o final, o último
+frase[1::3] começa no 3, vai até o final e vai pulando de três em três
+len(frase)
+frase.count('o') quantas vezes existe a letra o
+frase.count('o', 0,13) pegar quantas letras o entre 0 e 12
+frase.find('dia')  em que momento começou o deo
+frase.find('qualquer coisa que não tenha na string') retorna -1
+'Curso' in frase - retorna true ou false
+frase.replace('Python','Android') substitui na string a palavra Python por Android
+frase.upper() vai ficar em maiúscula
+frase.lower() coloca tudo em minúsculo
+frase.capitalize() Só a primeira letra fica em maiúscula
+frase.title() cada palavra depois do espaço ficará com a primeira letra em maiúscula
+frase.strip() remove os espaços no início e no final da string
+frase.rstrip() vai remover os espaços à direita
+frase.lstrip() remove os espaços da esquerda
+frase.split() Vai tirar os espaços e cada palavra fica armezanada separadamente, Curso em vídeo, tem bloquinhos do 0 até o 13, com o split cada palavra tem seu bloquinho, Curso do 0 até o 4, em 0 e 1... Gera uma outra lista
+'-'.join(frase) vai juntar os elementos de frase usando o separador -
