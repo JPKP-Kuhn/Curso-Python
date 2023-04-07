@@ -33,7 +33,7 @@ PreencheY=[]
 tempo_acumulado = 0
 tempo_passado_segundos = 0
 Check_tempo=0
-veloc = -30
+veloc = -100
 
 
 
@@ -65,11 +65,8 @@ while True: #1000/32 tempo em milissegundos para mostrar a tela, o computador em
     
     tempo_passado = clock.tick()
     for i in range(len(PreencheX)):
-         pygame.draw.line(screen, (0, 0, 250), (x_i,PreencheY[i]), (x_i+veloc,PreencheY[i]+veloc)) #superfície, cor, posição inicial e final
+         pygame.draw.line(screen, (0, 0, 250), (x_i+50,PreencheY[i]+veloc), (x_i-50,PreencheY[i]-veloc)) #superfície, cor, posição inicial e final
     tempo_passado = clock.tick()
 
 
     pygame.display.update()
-
-
-
