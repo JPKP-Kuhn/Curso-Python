@@ -23,8 +23,8 @@ print("Tamanho do background: ", mouse.get_width(), mouse.get_height())
 clock = pygame.time.Clock() #Inicia um relógio com tempo zero.
 
 #Posições das retas
-x_i=100
-y_i=150
+x_i=110
+y_i=240
 y_aux = y_i
 lim_y_cima=300
 PreencheX=[]
@@ -33,7 +33,7 @@ PreencheY=[]
 tempo_acumulado = 0
 tempo_passado_segundos = 0
 Check_tempo=0
-veloc = -100
+veloc = -30
 
 
 
@@ -43,7 +43,7 @@ while True: #1000/32 tempo em milissegundos para mostrar a tela, o computador em
             pygame.quit() #botão pra fechar a tela
             sys.exit(1)
     tempo_passado=clock.tick()
-    tempo_passado_segundos += tempo_passado/500
+    tempo_passado_segundos += tempo_passado/250
     if (Check_tempo==(int(tempo_passado_segundos)-1)):
         Check_tempo = int(tempo_passado_segundos)
         print(Check_tempo, "segundos")
@@ -51,7 +51,7 @@ while True: #1000/32 tempo em milissegundos para mostrar a tela, o computador em
         PreencheX.append(x_i)
         PreencheY.append(y_aux)
 
-        pygame.draw.line(screen, (0, 0, 250), (x_i,y_i), (x_i+150,y_aux)) #superfície, cor, posição inicial e final
+        pygame.draw.line(screen, (0, 0, 250), (x_i,y_i+100), (x_i+150,y_aux+100)) #superfície, cor, posição inicial e final
     tempo_passado = clock.tick()
 
     screen.fill(Cor_Fundo)
@@ -65,7 +65,7 @@ while True: #1000/32 tempo em milissegundos para mostrar a tela, o computador em
     
     tempo_passado = clock.tick()
     for i in range(len(PreencheX)):
-         pygame.draw.line(screen, (0, 0, 250), (x_i+50,PreencheY[i]+veloc), (x_i-50,PreencheY[i]-veloc)) #superfície, cor, posição inicial e final
+         pygame.draw.line(screen, (0, 0, 250), (x_i+120,PreencheY[i]-veloc/2), (x_i-30,PreencheY[i]-1.5*veloc)) #superfície, cor, posição inicial e final
     tempo_passado = clock.tick()
 
 
