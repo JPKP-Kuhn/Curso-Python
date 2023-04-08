@@ -14,7 +14,7 @@ frase[1::3] começa no 3, vai até o final e vai pulando de três em três
 len(frase)
 frase.count('o') quantas vezes existe a letra o
 frase.count('o', 0,13) pegar quantas letras o entre 0 e 12
-frase.find('dia')  em que momento começou o deo
+frase.find('dia')  em que momento começou o dia
 frase.find('qualquer coisa que não tenha na string') retorna -1
 'Curso' in frase - retorna true ou false
 frase.replace('Python','Android') substitui na string a palavra Python por Android
