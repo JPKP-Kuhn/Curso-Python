@@ -50,12 +50,10 @@ class contaBancaria():
         self._extrato.append({
             'Tipo': tipo, 
             'Valor': valor,
+            'Saldo Atual': self._saldo,
             'Data': datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         })
     
     def _get_extrato(self):
         return self._extrato
-
     
-class Chequeespecial(contaBancaria):
-    pass
