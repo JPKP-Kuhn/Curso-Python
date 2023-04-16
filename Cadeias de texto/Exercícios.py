@@ -29,25 +29,48 @@ print(numero2)
 nome = input('Digite seu nome completo: ')
 print(nome.upper())
 print(nome.lower())
-print(len(nome.split()))
-print(len(nome.split()))
+print("Quantas palavras tem", len(nome.split()))
 
 #Ex2
 milhar = input('Digite um número: ')
 print(milhar)
+k = len(milhar)
+if k < 4:
+    milhar = milhar.rjust(4, '0')
+    print(milhar)
+if k > 4 :
+    milhar = milhar.replace(milhar[0], '')
+    print(milhar)
 print('unidade:', milhar[3])
 print('dezena:', milhar[2])
 print('centena:', milhar[1])
 print('milhar:', milhar[0])
 
+#Usando o while
+while not 0 <= int(entrada := input("Digite um numero de 0 a 9999: ")) < 10000:
+    print('Número inválido, tente novamente!')
+else:
+    entrada = entrada.rjust(4, '0')
+
+milhar, centena, dezena, unidade = entrada
+print(entrada)
+print(f'{unidade=}, {dezena=}, {centena=}, {milhar=}')
+
 #Ex3 tem Santo no nome?
 cidade = input('Digite o nome da sua cidade: ')
-santo = 'Santo' in cidade
-if (santo == True):
-    print('Santo' in cidade)
+print('Santo' in cidade)
 
 #Ex4 tem Silva no nome?
 sobrenome = input('Digite o seu nome: ')
 print('Silva' in sobrenome)
 
 #Ex5
+texto = input("Digite uma frase qualquer: ")
+print("A letra a aparece ", texto.upper().count("A"), "vezes.")
+print("A primeira letra A está na posição: ", texto.upper().find('A'))
+print("A última letra A está na posição: ", texto.rfind('a'))
+
+#Ex6
+nomear = input("Digite seu nome: ")
+print("Primeiro nome: ", nomear.split()[0])
+print("Último nome: ", nomear.split()[-1])

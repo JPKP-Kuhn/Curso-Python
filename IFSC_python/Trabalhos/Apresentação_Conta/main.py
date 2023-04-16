@@ -1,10 +1,12 @@
 #coding: utf-8
 import contaBancaria as cB
 import chequeEspecial as cE
+import cartao as c
 
 if __name__ == "__main__":
     #conta = cB.contaBancaria() Herança
     cheque = cE.chequeEspecial()
+    cartao = c.cartao()
 
     print('Vamos abrir sua conta bancária!')
     nome = input('\nEntre com seu nome completo: ')
@@ -12,8 +14,10 @@ if __name__ == "__main__":
 
     cheque._set_correntista(nome, 0)
     cheque._set_renda(renda)
+    
 
     correntista_info = cheque._get_correntista()
+    cartao_info = cartao._get_cartao()
 
     print(f'Seja bem vindo {correntista_info["Nome"]}! A data de criação da sua conta é {correntista_info["Data de abertura"]}')
 
@@ -21,7 +25,7 @@ if __name__ == "__main__":
     print(f'Seu saldo atual é {cheque._get_saldo()}' )
 
     while True:
-        chamada = input('O que você deseja fazer? \nVer dados do correntista(1), Fazer Depósito(2), Fazer Saque(3), Ver Histórico de Extrato(4), Ver saldo Médio(5) Fechar(6): ')
+        chamada = input('O que você deseja fazer? \nVer dados do correntista(1), Fazer Depósito(2), Fazer Saque(3), Ver Histórico de Extrato(4), Ver saldo Médio(5), Informações do cartão(6) Fechar(7): ')
         if(chamada == '1'):
             correntista_info = cheque._get_correntista()
             saldo = cheque._get_saldo()
@@ -48,4 +52,9 @@ if __name__ == "__main__":
             print(f'Saldo Médio é: {cheque._set_saldo_medio(periodo)}')
 
         if(chamada == '6'):
+            cartao_info = cartao._get_cartao()
+            cartao._set_cartao(cheque._get_saldo())
+            print("Informções do cartão: ", cartao_info)
+
+        if(chamada == '7'):
             break

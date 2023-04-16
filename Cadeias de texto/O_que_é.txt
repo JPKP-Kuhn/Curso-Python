@@ -2,10 +2,10 @@ Bom dia  --> Pra uma linguagem de programção qualquer frase é uma cadeia de c
 Como manipular string
 
 frase = 'Bom dia'
-Cada caractere é guardado num índice, um número sequencial pra caber todos os caracteres, incluindo espaços, começa do 0
+Cada caractere é guardado num índice, um número sequencial pra caber todos os caracteres, incluindo espaços, começa do 0. Tem ao todo 6 indices
 
 Fatiar uma string é pegar pedaços dela
-frase[3] vai pegar da lista o caractere que é um m minúsculo
+frase[3] vai pegar da lista o caractere que é o espaço
 frase[2:6] vai pegar os caracteres do 2 até o 5, range (o último é desconsiderado)
 frase[2:8:2] vai pegar até o 7 e o terceio é poque vai pulando de dois em dois
 frase[:5] começará do caractere 0 e vai até o 4
