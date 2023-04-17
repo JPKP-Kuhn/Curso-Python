@@ -29,8 +29,8 @@ if __name__ == "__main__":
         if(chamada == '1'):
             correntista_info = cheque._get_correntista()
             saldo = cheque._get_saldo()
-            print(correntista_info, f'Saldo: {saldo}')
-            print(f'Sua renda mensal é: {renda}')
+            print(correntista_info, f'Saldo: {saldo:.2f}')
+            print(f'Sua renda mensal é: {renda:.2f}')
             print(f'Seu limite de cheque especial é {cheque._get_limite()}')
 
         if(chamada == '2'):
@@ -52,6 +52,7 @@ if __name__ == "__main__":
             print(f'Saldo Médio é: {cheque._set_saldo_medio(periodo)}')
 
         if(chamada == '6'):
+            print("Para ter um limite de cartão você precisa fazer seu primeiro depósito.")
             cartao_info = cartao._get_cartao()
             cartao._set_cartao(cheque._get_saldo())
             print("Informções do cartão: ", cartao_info)
