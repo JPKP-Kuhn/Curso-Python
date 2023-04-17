@@ -56,18 +56,20 @@ print(entrada)
 print(f'{unidade=}, {dezena=}, {centena=}, {milhar=}')
 
 #Ex3 tem Santo no nome?
-cidade = input('Digite o nome da sua cidade: ')
-print('Santo' in cidade)
+cidade = input('Digite o nome da sua cidade: ').strip()
+cidade = cidade.lower()
+print('santo' in cidade)
 
 #Ex4 tem Silva no nome?
-sobrenome = input('Digite o seu nome: ')
-print('Silva' in sobrenome)
+sobrenome = input('Digite o seu nome: ').strip()
+sobrenome = sobrenome.lower()
+print('silva' in sobrenome)
 
 #Ex5
-texto = input("Digite uma frase qualquer: ")
+texto = input("Digite uma frase qualquer: ").strip()
 print("A letra a aparece ", texto.upper().count("A"), "vezes.")
-print("A primeira letra A está na posição: ", texto.upper().find('A'))
-print("A última letra A está na posição: ", texto.rfind('a'))
+print("A primeira letra A está na posição: ", texto.upper().find('A')+1)
+print("A última letra A está na posição: ", texto.rfind('a')+1)
 
 #Ex6
 nomear = input("Digite seu nome: ")
