@@ -26,25 +26,24 @@ numero2 = numero2.replace(numero2[8], '-') #3º é o count
 print(numero2)
 
 #Ex1
-nome = input('Digite seu nome completo: ')
+nome = input('Digite seu nome completo: ').strip()
 print(nome.upper())
 print(nome.lower())
-print("Quantas palavras tem", len(nome.split()))
+print("Seu nome tem ", len(nome) - nome.count(' '), ' letras.')
+print("Seu primeiro nome tem", nome.find(" "))
 
 #Ex2
-milhar = input('Digite um número: ')
+milhar = int(input('Digite um número: '))
 print(milhar)
-k = len(milhar)
-if k < 4:
-    milhar = milhar.rjust(4, '0')
-    print(milhar)
-if k > 4 :
-    milhar = milhar.replace(milhar[0], '')
-    print(milhar)
-print('unidade:', milhar[3])
-print('dezena:', milhar[2])
-print('centena:', milhar[1])
-print('milhar:', milhar[0])
+u = milhar // 1 % 10
+d = milhar // 10 % 10
+c = milhar // 100 % 10
+m = milhar // 1000 % 10
+
+print('unidade:', u)
+print('dezena:', d)
+print('centena:', c)
+print('milhar:', m)
 
 #Usando o while
 while not 0 <= int(entrada := input("Digite um numero de 0 a 9999: ")) < 10000:
