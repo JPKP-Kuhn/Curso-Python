@@ -1,0 +1,9 @@
+Comando sequenciais vão de cima pra baixo, como um passo a passo
+Algoritmo que chegar num certo ponto e terá duas possibilidades, dependendo da condição imposta pode causar desvios, se for verdadeiro executa um código, se for falso pode executar outro
+Se senão --> if verdadeiro executa ele (o bloco verdadeiro) else executa se o if for falso (executa o bloco falso)
+if verdadeiro:
+    bloco verdadeiro
+else:
+    bloco falso
+
+Importante é a identação que deve estar correta
