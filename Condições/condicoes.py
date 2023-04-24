@@ -1,4 +1,5 @@
-import random as r
+from random import randint
+from datetime import date
 
 tempo = int(input("Quntos anos tem seu carro? "))
 if (tempo <= 3):
@@ -26,7 +27,7 @@ else:
 #-- Exercícios --
 
 #Ex1 descobrir o número:
-inteiro = r.randint(0, 5)
+inteiro = randint(0, 5)
 sorte = int(input("Escolha um número entre 0 e 5: "))
 while sorte != inteiro:
     sorte = int(input("Errou, tente novamente: "))
@@ -51,16 +52,18 @@ else:
 #Ex4 Viagem de ônibus
 dist = float(input("Distância da viagem: "))
 if dist <= 200:
-    print(f"O valor a ser pago pela viagem é {dist * 0.5}")
+    print(f"O valor a ser pago pela viagem é R${dist * 0.50}")
 else:
-    print(f"O valor a ser pago pela viagem é {dist * 0.45}")
+    print(f"O valor a ser pago pela viagem é R${dist * 0.45}")
 
 #Ex5 Ano bissexto
-ano = int(input("Informe um ano: "))
-if ano % 4 == 0:
-    print("Ano bissexto")
+ano = int(input("Informe um ano, 0 pro ano atual: "))
+if ano == 0:
+    ano = date.today().year
+if ano % 4 == 0 and ano % 100 !=0 or ano % 400 == 0:
+    print(f"{ano} é um ano bissexto")
 else:
-    print("Ano normal")
+    print(f"{ano} não é um ano bissexto")
 
 #Ex6 O menor e o maior número
 n1 = int(input("Primeiro número: "))
@@ -76,7 +79,7 @@ print("O menor é ", menor)
 #Ex7 aumento de salário
 salario = float(input("Salário: "))
 if salario > 1250:
-    print("Aumento de 10%, ", salario *1.1)
+    print("Aumento de 10%, {:.2f} ".format(salario *1.1))
 else:
     print("Aumento de 15%, ", salario * 1.15)
 
