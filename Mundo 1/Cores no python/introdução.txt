@@ -1,0 +1,14 @@
+tem o módulo colorize
+Seguindo o padrão ANSI \033[ style text background m código da cor antes do m] pode ser em qualquer ordem
+\033[0:33:44m]
+códigos de style do python
+0 - sem estilo
+1 - em negrito
+4 - sublinhado
+7 - inverter as operações
+
+text
+33 até 37 são as cores do próprio python, pra outras precisa de um módulo
+
+background
+40 até 47 cores do padrão ANSI no python, correspondem as mesmas cores do text na ordem
