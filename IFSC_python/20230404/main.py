@@ -6,8 +6,8 @@ from pygame.locals import* #abrir imagem
 TamTela = (640,480) #tamanho da tela do pygame horizontal/vertical, funcionará em qualquer computador
 screen = pygame.display.set_mode(TamTela, 0, 32) #Criação da superfície inicial, (tamanho, onde inicia, frames/segundo (acima de 24 tem ilusão de movimento))
 Cor_Fundo = (200,200,200) #Padrão RGB, cinza claro
-BIF1 = "Imagens/CaixaAcoplada.png" #Background Image Figure
-MIF1 = "Imagens/CursorMouse1.png" #MIF Mouse image file
+BIF1 = "IFSC_python/20230404/Imagens/CaixaAcoplada.png" #Background Image Figure
+MIF1 = "IFSC_python/20230404/Imagens/CursorMouse1.png" #MIF Mouse image file
 back = pygame.image.load(BIF1).convert() #Background, convert pro pygame já deixar ela guardada pra agilizar o processo
 mouse = pygame.image.load(MIF1).convert_alpha()
 MIF1_width=mouse.get_rect().width

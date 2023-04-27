@@ -12,14 +12,14 @@ class PygameCtrl():
 		
 		self._MIF1 = "Imagens/CursorMouse.png"
 
-		self.initPygame()
+		self._initPygame()
 
 	def _initPygame(self):
-		pygame.init()
-		self.Screen = p.display().set_mode(self._tam_tela, 0, 32)
+		p.init()
+		self.Screen = p.display.set_mode(self._tam_tela, 0, 32)
 		self.BackImage = p.image.load(self._BIF1).convert()
 		self.MouseImage = p.image.load(self._MIF1).convert_alpha()
-		self.screen.fill(self._cor_fundo)
+		self.Screen.fill(self._cor_fundo)
 
 		self.Botao1 = p.image.load(self._Botao1Imagem).convert_alpha()
 		self.Botao1b = p.image.load(self._Botao1Imagem).convert()
