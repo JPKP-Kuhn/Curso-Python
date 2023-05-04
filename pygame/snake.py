@@ -9,13 +9,21 @@ def on_grid_random():
 def collision(c1, c2):
     return (c1[0] == c2[0]) and (c1[1] == c2[1])
 
+def pontuacao(msg, tamanho, cor):
+    fonte = pygame.font.SysFont('comicsansms', tamanho, True, False)
+    mensagem = f'{msg}'
+    texto = fonte.render(mensagem, True, cor)
+    return texto
+
+score = 0
+texto_pontos = pygame.Surface((520,30))
 UP = 0
 RIGHT = 1
 DOWN = 2
 LEFT = 3
 
 pygame.init()
-screen = pygame.display.set_mode((600, 600))
+screen = pygame.display.set_mode((600, 600), 0, 32)
 pygame.display.set_caption('Snake')
 
 snake = [(200, 200), (210, 200), (220, 200)] #a cobra e uma lista de segmentos, tupla com valor de x e y pra mostrar onde tá o quadrado
@@ -46,12 +54,19 @@ while True:
             if event.key == K_RIGHT:
                 my_direction = RIGHT
 
+    screen.fill((220, 220, 220))
 
     if collision(snake[0], apple_pos):
         apple_pos = on_grid_random()
         snake.append((0,0))
+        score += 1
+        texto_pontos = pontuacao(pontuacao, 40, (255,255,255))
+        print(score)
 
-     #pro resto do corpo acompanhar
+    screen.blit(texto_pontos, (520, 30))
+    
+
+    #pro resto do corpo acompanhar
     for i in range(len(snake) -1, 0, -1):
         snake[i] = (snake[i-1][0], snake[i-1][1])
 

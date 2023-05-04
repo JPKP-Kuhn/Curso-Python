@@ -17,6 +17,7 @@ class PygameCtrl(CA.CaixaAcoplada):
         self._MIF2 = "../Imagnes/CursosrMouse2.png"
         self._clock = pyg.time.Clock() #aviso ao pygame que vamos usar um relógio
         self.ContTempoSeg = 0
+        self.ContTempoMin = 0
         self.ContTempoAcumulado = 0
 
         self._Screen = pyg.display.set_mode(self._TamTela, 0, 32)
@@ -32,14 +33,17 @@ class PygameCtrl(CA.CaixaAcoplada):
         self._RetanguloRelogio = pyg.draw.rect(self._Screen, (255,255,255), pyg.Rect((410, 405),(240,40)))
         FontTempoOperacao = pyg.font.SysFont("Arial", 15)
         self.ContTempoAcumulado+=self.tick
-        print(self.ContTempoSeg)
         self.ContTempoSeg = self.ContTempoAcumulado/1000 #Marca o tempo em segundos
-        self.ContTempoMin = (self.ContTempoAcumulado/1000)/60
+        if self.ContTempoAcumulado >= 60000:
+            self.ContTempoAcumulado = 0
+            self.ContTempoSeg = 0
+            self.ContTempoMin += 1
+        #self.ContTempoMin = (self.ContTempoAcumulado/1000)/60
         self.TempoMin =1
         self.TempoSeg = 1
         TextoTempo = "{0:02d}:{1:02d}".format(int(self.ContTempoMin), int(self.ContTempoSeg))
         TextoTempo = FontTempoOperacao.render(TextoTempo, True, (0,0,0))
-        self._Screen.blit(TextoTempo, (440,250))
+        self._Screen.blit(TextoTempo, (440,415))
 
 
     def _pygame_loop(self):
