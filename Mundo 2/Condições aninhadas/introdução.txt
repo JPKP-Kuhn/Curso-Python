@@ -1,0 +1,10 @@
+Além de ter só duas opções pod ter mais de uma.
+Uma estrutura condicional só tem duas opções, mas com condições aninhadas dá pra ter mais
+if condição:
+    bloco 1
+elif outra condição: 
+    blco 2
+else:
+    bloco 3
+
+pode ter outros elif
