@@ -1,14 +1,11 @@
 import datetime
-import random
-import time
 
 #Ex1 Financiamento
-
-valor = float(input("Qual o valor da casa que você deseja comprar: "))
+valor_casa = float(input("Qual o valor da casa que você deseja comprar: "))
 salario = float(input("Digite seu salário: "))
 anos_pagamento = int(input("Quantos anos de pagamento: "))
 
-valor_parcelas = valor / anos_pagamento / 12
+valor_parcelas = valor_casa / anos_pagamento / 12
 
 if valor_parcelas / salario > 0.3:
     print("Você não poderá financiar essa casa")
@@ -17,7 +14,7 @@ else:
 
 #Ex2 Bases numéricas
 inteiro = int(input('Digite um número inteiro qualquer: '))
-escolha = int(input("Convertê-lo para; (1)Binário; (2)Octal; (3)Hexadecimal: "))
+escolha = int(input("Convertê-lo para: \n(1)Binário; \n(2)Octal; \n(3)Hexadecimal \n sua opção: "))
 
 if escolha == 1:
     print(bin(inteiro))
