@@ -6,11 +6,15 @@ jogadas_pc = ['pedra', 'papel', 'tesoura']
 jogada = random.choice(jogadas_pc)
 
 sua_jogada = input("pedra, papel tesoura: " )
-time.sleep(1)
-print('-='*10)
-time.sleep(1)
-print(sua_jogada)
-print(jogada)
+
+for i in range(5):
+    print('-=',flush=True,end='')
+    time.sleep(1)
+
+print(f"\nSua jogada:  {sua_jogada}")
+time.sleep(2)
+print(f"Jogada do computador: {jogada}")
+time.sleep(2)
 
 if sua_jogada.lower() == 'pedra' and jogada == 'tesoura':
     print('Parabéns, você me venceu')
@@ -27,12 +31,12 @@ if sua_jogada.lower() == 'papel' and jogada == ' tesoura':
 
 
 while (sua_jogada == jogada):
+    if( sua_jogada == jogada):
+        print("Quem diria! Fizemos a mesma jogada")
     jogada = random.choice(jogadas_pc)
     sua_jogada = input("Realize uma nova jogada: ")
-    time.sleep(1)
-    print('-='*10)
-    time.sleep(1)
     print(sua_jogada)
+    time.sleep(2)
     print(jogada)
     if sua_jogada.lower() == 'pedra' and jogada == 'tesoura':
         print('Parabéns, você me venceu')
