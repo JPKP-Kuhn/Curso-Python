@@ -89,8 +89,8 @@ n1 = int(input("a: "))
 n2 = int(input("b: "))
 n3 = int(input("c: "))
 if n1 < n2 + n3 and n1 > n2 - n3:
-    print("Parabéns, você tem um triângulo",end='')
-    if n1 == n2 and n2 == n3:
+    print("Parabéns, você tem um triângulo ",end='')
+    if n1 == n2 == n3:
         print('Equilátero')
     elif n1 != n2 != n3 != n1:
         print('Escaleno')
@@ -99,4 +99,45 @@ if n1 < n2 + n3 and n1 > n2 - n3:
 else:
     print('Os segmentos não podem formar um triângulo')
 
+#Ex8
+peso = float(input('Qual é seu peso?(kg) '))
+altura = float(input('Qual é a sua altura?(m) '))
+imc = peso / altura ** 2
+print(f'O imc dessa pessoa é de {imc:.1f}')
+if imc < 18.5:
+    print('Você está abaixo do peso normal')
+elif 18.5 <= imc < 25:
+    print('Você está na faixa de peso normal')
+elif 25 <= imc < 30:
+    print('Você está em sobrepeso')
+elif 30 <= imc < 40:
+    print('Você está em obesidade, cuidado')
+elif imc >= 40:
+    print('Você está em obesidade mórbida!')
 
+#Ex9
+print('{:-=40}'.format(' LOJAS KUHN '))
+preco = float(input('Preço das compras: R$ '))
+print(''' FORMAS DE PAGAMENTO
+[ 1 ] à vista dinheiro/cheque
+[ 2 ] à vista cartão
+[ 3 ] 2x no cartão
+[ 4 ] 3x ou mais no cartão''')
+opcao = int(input('Qual a opção? '))
+if opcao == 1:
+    total = preco  - (preco * 10/100)
+elif opcao == 2:
+    total = preco - (preco * 5/100)
+elif opcao == 3:
+    total = preco
+    parcela = total / 2
+    print('Sua compra será parcelada em 2x de R${:.2f}'.format(parcela))
+elif opcao == 4:
+    total = preco + (preco * 20/100)
+    totparc = int(input('Quantas parcelas? '))
+    parcela = total / totparc
+    print('Sua compra será parcelada em {}x de R${:.2f} com juros'.format(totparc, parcela))
+else:
+    print('Opção inválida de pagamento, tente novamnete')
+    total = preco
+print('Sua compra de R${:.2f} vai custar R${:.2f} no final.'.format(preco, total))

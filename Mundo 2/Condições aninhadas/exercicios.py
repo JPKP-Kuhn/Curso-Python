@@ -96,12 +96,15 @@ if a < b + c and a > b - c:
         print('Triângulo isósceles')
     else:
         print("Triângulo escaleno")
+else:
+    print('Não é possível formar um triângulo')
 
 #Ex8 IMC
 peso = float(input('Informe seu peso: '))
 altura = float(input("Informe sua altura: "))
 
 imc = peso / altura **2
+print(f'Seu imc é {imc}')
 if imc < 18.5:
     print("Abaixo do peso")
 elif imc > 18.5 and imc < 25:
