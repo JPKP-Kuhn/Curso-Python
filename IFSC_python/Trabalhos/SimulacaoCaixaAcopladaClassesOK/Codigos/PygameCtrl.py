@@ -31,6 +31,7 @@ class PygameCtrl(CA.CaixaAcoplada, PygameBasics, SurfScreen, SurfDados, SurfCaix
 				#Evita que as imagens do mouse na tela fiquem estaticas no frame			
 			self.Screen.blit(self.SurfDados, (400,30))#Posicao de entrada.
 			self.Screen.blit(self.SurfCaixa, (10,10))#Posicao de entrada.		
-			self.Mouse_blit()		
+			self.Mouse_blit()	
+			print(pyg.mouse.get_pos())	
 			pyg.display.update()				
 			

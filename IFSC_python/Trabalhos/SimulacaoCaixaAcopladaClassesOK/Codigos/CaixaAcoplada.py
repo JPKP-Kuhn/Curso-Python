@@ -2,7 +2,7 @@
 import ComportaVedacao as CV
 import ValvulaAlimentacao as VA
 import AlavancaAcionamento as AA
-import pygame as pyg
+#import pygame as pyg
 
 '''
 Caixa Acoplada altera condições das duas superficies definidas na simulação.
@@ -58,8 +58,7 @@ class CaixaAcoplada():
 				self.Estado =1	#A caixa passa para regime de enchimento.
 				self.MouseFlag=True
 				self.cronometro = True	
-				self._Controle_vazao_entrada()	#Inicia contagem de tempo para simulacao
-												#do enchimento da caixa 				
+				self._Controle_vazao_entrada()	#Inicia contagem de tempo para simulacao do enchimento da caixa 				
 			self.SurfDados.blit( self.StartImage, (5,5), self.retImageOnButton )				
 		else:
 			self.MouseFlag=True
@@ -80,8 +79,7 @@ class CaixaAcoplada():
 			if (self.MouseClicked==True):
 				self.Estado =3	#A caixa passa para regime de esvaziamento
 				self.MouseFlag=True
-				self._Controle_vazao_saida()	#Inicia contagem de tempo para simulacao
-												#do esvaziamento da caixa			
+				self._Controle_vazao_saida()	#Inicia contagem de tempo para simulacao do esvaziamento da caixa			
 		else:
 			self.MouseFlag=True		#Volta o mouse para seta								
 		self.MouseClicked = False	#desmarca o clique do mouse.	

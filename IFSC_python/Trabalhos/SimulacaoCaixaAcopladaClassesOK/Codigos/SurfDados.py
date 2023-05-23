@@ -3,7 +3,7 @@
 import pygame as pyg
 import pygame.locals as pyl
 import CaixaAcoplada as CA
-import sys
+#import sys
 
 class SurfDados():
 	####################### Controles Estáticos #####################

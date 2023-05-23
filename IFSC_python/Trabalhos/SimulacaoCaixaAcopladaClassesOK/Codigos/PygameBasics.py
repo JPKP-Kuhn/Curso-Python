@@ -24,7 +24,7 @@ class PygameBasics():
 		#Controlador de mouse
 		self.MouseClicked = False	#Informa se houve clique de mouse
 		self.MouseFlag = True		#Flag para utilizar mouse em posicoes definidas.
-									#True: seta, False: mão
+		#True: seta, False: mão
 		#Definicao de Superfícies 		
 		self.SurfScreen()	#Cria superficie básica.
 		self.SurfCaixa() 	#Cria superficie para caixa acoplada e define imagem
@@ -35,7 +35,7 @@ class PygameBasics():
 		#Botoes B1 são os que aparecem já no inicio da simulacao
 		self.flagB1a = False	#Localiza o botao de liga
 		self.flagB1b = False	#Localiza o botao da valvula. 		
-		self.flagB2a = False	#Localiza botao de desliga. #Depois do estado 2		
+		self.flagB2a = False	#Localiza botao de desliga. Depois do estado 2		
 				
 		#Botao da valvula
 		self.BotaoValvulaImage1 = pyg.image.load(ValvulaImage1Path).convert_alpha()
