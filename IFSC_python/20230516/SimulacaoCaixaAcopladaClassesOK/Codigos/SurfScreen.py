@@ -10,11 +10,15 @@ class SurfScreen():
 			self.flagB1b = True	#Flag para o botao1b										
 		else: 
 			self.flagB1b = False			
-		if (400<pyg.mouse.get_pos()[0]<450 and 32<pyg.mouse.get_pos()[1]<75):	
+		if (400<x_i<450 and 32<y_i<75):	
 			#Trocar por xi e yi
 			self.flagB1a =True
 		else: 
-			self.flagB1a = False	
+			self.flagB1a = False
+		if (400<pyg.mouse.get_pos()[0]<450 and 95<pyg.mouse.get_pos()[1]<135):
+			self.flagB3a = True
+		else:
+			self.flagB3a = False
 
 			
 	def Mouse_blit(self):	#Seleciona o tipo de mouse	
@@ -26,10 +30,10 @@ class SurfScreen():
 			MouseBound2 = True
 		if (MouseBound1 and MouseBound2): 			
 			if (self.MouseFlag ==True): 
-				self.Screen.blit(self.MouseImage1, 
-					(pyg.mouse.get_pos()[0]-7,pyg.mouse.get_pos()[1]+3) )
+				self.Screen.blit(self.MouseImage1,  #Mouse maozinha
+					(pyg.mouse.get_pos()[0]+3,pyg.mouse.get_pos()[1]-7))
 			else: 	
-				self.Screen.blit(self.MouseImage2, 
+				self.Screen.blit(self.MouseImage2, #Mouse normal
 					(pyg.mouse.get_pos()[0],pyg.mouse.get_pos()[1])  )
 
 

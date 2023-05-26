@@ -35,7 +35,8 @@ class PygameBasics():
 		#Botoes B1 são os que aparecem já no inicio da simulacao
 		self.flagB1a = False	#Localiza o botao de liga
 		self.flagB1b = False	#Localiza o botao da valvula. 		
-		self.flagB2a = False	#Localiza botao de desliga. Depois do estado 2		
+		self.flagB2a = False	#Localiza botao de desliga. Depois do estado 2
+		self.flagB3a = False	#Localiza botão de manutenção		
 				
 		#Botao da valvula
 		self.BotaoValvulaImage1 = pyg.image.load(ValvulaImage1Path).convert_alpha()

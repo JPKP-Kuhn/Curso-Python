@@ -88,7 +88,7 @@ class SurfDados():
 			vazaoSaida = self.FontA15.render(vazaoSaida, True, self.Preto)
 			self.SurfDados.blit(vazaoSaida, (15,200))				
 		elif (self.Estado==4): 
-			Texto_Processo+="Caixa em manutenção"			
+			Texto_Processo+="Caixa em manutenção, aguarde o fim desta."			
 		Texto_Processo = self.FontA15.render(Texto_Processo, True, self.Preto)	#Cria imagem do texto
 		self.SurfDados.blit(Texto_Processo, (15,160))	#Blit do texto na posicao
 		self.SurfDados.blit(volumeAtual, (15,180))	

@@ -90,7 +90,13 @@ class CaixaAcoplada():
 		self._alavanca._incrementa_contador() 
 
 	def CA_Estado4(self):
-		self.SurfDados.blit( self.StartImageDark, (5,5), self.retImageOffButton )
+		if(self.flagB3a): #Localiza vizinhança do botao para manutenção
+			self.SurfDados.blit( self.StartImageDark, (5,5), self.retImageOffButton )
+			self.MouseFlag=False
+			if(self.MouseClicked==True):
+				self.Estado=3 #Inicia a manutenção
+				self.MouseFlag=True
+				self._Controle_vazao_saida()
 
 	def _Controle_vazao_entrada(self):
 		self.VolumeCaixa = 0
