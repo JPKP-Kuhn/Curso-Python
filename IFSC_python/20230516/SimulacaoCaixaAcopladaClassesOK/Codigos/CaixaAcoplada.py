@@ -72,7 +72,7 @@ class CaixaAcoplada():
 	def CA_Estado2(self):
 		self.SurfCaixaLinhaDagua()
 		self.SurfDados.blit( self.OkImage, (5,5) )
-		self.SurfDados.blit( self.StartImage, (5,70), self.retImageOffButton)
+		self.SurfDados.blit( self.Maintenance, (5,70), self.retImageMaintenance)
 		self._valvula._status = "Fechada"		
 		if(self.flagB1b):	#Localiza vizinhança do botao da valvula			
 			self.MouseFlag=False	#Troca a figura do mouse para mãozinha
@@ -82,22 +82,26 @@ class CaixaAcoplada():
 				self._Controle_vazao_saida()	#Inicia contagem de tempo para simulacao do esvaziamento da caixa			
 		else:
 			self.MouseFlag=True		#Volta o mouse para seta								
-		self.MouseClicked = False	#desmarca o clique do mouse.	
+		self.MouseClicked = False	#desmarca o clique do mouse.
+
+		if(self.flagB3a): #Localiza vizinhança do botao para manutenção
+			self.MouseFlag=False
+			if(self.MouseClicked==True):
+				self.Estado=4 #Inicia a manutenção
+				self.MouseFlag=True
+				self._Controle_vazao_saida()
 
 	def CA_Estado3(self):	#Esvaziamento
 		self._valvula._status = "Aberta"		
 		self.SurfCaixa_esvaziamento()
-		self._alavanca._incrementa_contador() 
+		self._alavanca._incrementa_contador()
+		
+
 
 	def CA_Estado4(self):
-		if(self.flagB3a): #Localiza vizinhança do botao para manutenção
-			self.SurfDados.blit( self.StartImageDark, (5,5), self.retImageOffButton )
-			self.MouseFlag=False
-			if(self.MouseClicked==True):
-				self.Estado=3 #Inicia a manutenção
-				self.MouseFlag=True
-				self._Controle_vazao_saida()
-
+		pass
+		
+		
 	def _Controle_vazao_entrada(self):
 		self.VolumeCaixa = 0
 		self.ControleTempoVolume = 0	

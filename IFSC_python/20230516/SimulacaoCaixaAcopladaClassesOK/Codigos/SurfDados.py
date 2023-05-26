@@ -32,27 +32,36 @@ class SurfDados():
 		self.retImageOffButton = pyg.Rect((self.StartImage.get_width()/2+2,0),(self.StartImage.get_width()+2,
 				self.StartImage.get_height()))		
 		self.retImageOnOffButton = pyg.Rect((0,0),(self.StartImage.get_width()/2,
-				self.StartImage.get_height()))			
+				self.StartImage.get_height()))
+		self.retImageMaintenance = pyg.Rect((0,0), (self.Maintenance.get_width(),
+				self.Maintenance.get_height()))
 		
 	
 	def SurfDados_Parametros_Botoes(self):
-		#Imagem do botão Liga- desliga.
+		#Imagens
 		self.OnOffImage = "../Imagens/BotaoOnOff.jpg"
-		self.OnOffImageDark = "../Imagens/BotaoOnOffDark.png"		 
-		self.StartImage =pyg.image.load(self.OnOffImage).convert_alpha()
-		self.StartImageDark =pyg.image.load(self.OnOffImageDark).convert_alpha()
-		#self.OkImage = "../Imagens/MaoOk.png"
+		self.ManutencaoImage = "../Imagens/Manutencao.png"
+		self.OnOffImageDark = "../Imagens/BotaoOnOffDark.png"
 		self.OkImage = "../Imagens/DedoApontando.png"
-		self.OkImage=pyg.image.load(self.OkImage).convert_alpha()
 		self.EspereImage = "../Imagens/mao_espere.png"
+
+		#Carregando as imagens, com fundo transparente
+		self.StartImage =pyg.image.load(self.OnOffImage).convert_alpha()
+		self.Maintenance =pyg.image.load(self.ManutencaoImage).convert_alpha()
+		self.StartImageDark =pyg.image.load(self.OnOffImageDark).convert_alpha()
+		self.OkImage=pyg.image.load(self.OkImage).convert_alpha()
 		self.EspereImage=pyg.image.load(self.EspereImage).convert_alpha()
+
 		reducao = 15	#Taxa de reducao da figura do botao de liga/desliga. 
 		base = self.StartImage.get_width()
 		altura = self.StartImage.get_height()
+
+		#Reconfiguração do tamanho das imagens
 		self.StartImage=pyg.transform.scale(self.StartImage,(base/reducao,altura/reducao))
+		self.Maintenance=pyg.transform.scale(self.Maintenance,(self.Maintenance.get_width()/5.5,self.Maintenance.get_height()/5.5))
 		self.StartImageDark=pyg.transform.scale(self.StartImageDark,(base/reducao,altura/reducao))
 		self.OkImage=pyg.transform.scale(self.OkImage,(self.OkImage.get_width()/12,self.OkImage.get_height()/12))		
-		self.EspereImage=pyg.transform.scale(self.EspereImage,(43,43))		
+		self.EspereImage=pyg.transform.scale(self.EspereImage,(43,43))	
 	
 	
 	####################### Controles Dinâmicos #####################	
@@ -88,7 +97,10 @@ class SurfDados():
 			vazaoSaida = self.FontA15.render(vazaoSaida, True, self.Preto)
 			self.SurfDados.blit(vazaoSaida, (15,200))				
 		elif (self.Estado==4): 
-			Texto_Processo+="Caixa em manutenção, aguarde o fim desta."			
+			Texto_Processo+="Caixa em manutenção"
+			vazaoSaida = "Vazão de saída: {:.1f} litro/seg".format(self._comporta._vazao_saida)		
+			vazaoSaida = self.FontA15.render(vazaoSaida, True, self.Preto)
+			
 		Texto_Processo = self.FontA15.render(Texto_Processo, True, self.Preto)	#Cria imagem do texto
 		self.SurfDados.blit(Texto_Processo, (15,160))	#Blit do texto na posicao
 		self.SurfDados.blit(volumeAtual, (15,180))	
@@ -133,16 +145,17 @@ class SurfDados():
 			self.SurfDados.blit(Caixa2, (50, 30))
 			self.SurfDados.blit(Caixa3, (60, 73))
 			self.SurfDados.blit(Caixa4, (60, 88))
-		elif(self.Estado==4): 
-			Caixa = self.fonteBase.render('Caixa em manutenção', True, self.Branco)
 		elif(self.Estado==3): 
 			Caixa = self.fonteBase.render("Caixa Esvaziando", True, self.Branco)
 				#Caixa pode ser desativada se estiver cheia.
-			self.SurfDados.blit(Caixa, (60, 20))	
+			self.SurfDados.blit(Caixa, (60, 20))
+		elif(self.Estado==4): 
+			Caixa = self.fonteBase.render('Caixa em manutenção', True, self.Branco)
 		else:
 			if(self.DesativarCaixa==False): 
 				Caixa= self.fonteBase.render('Caixa em uso', True, self.Branco)
 			else:
 				Caixa = self.fonteBase.render('Desativar caixa', True, self.Branco)
 				
+		
 
