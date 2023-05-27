@@ -19,6 +19,10 @@ class SurfScreen():
 			self.flagB3a = True
 		else:
 			self.flagB3a = False
+		if (475<x_i<515 and 43<y_i<81):
+			self.flagB3b = True
+		else:
+			self.flagB3b = False
 
 			
 	def Mouse_blit(self):	#Seleciona o tipo de mouse	
@@ -34,6 +38,6 @@ class SurfScreen():
 					(pyg.mouse.get_pos()[0]+3,pyg.mouse.get_pos()[1]-7))
 			else: 	
 				self.Screen.blit(self.MouseImage2, #Mouse normal
-					(pyg.mouse.get_pos()[0],pyg.mouse.get_pos()[1])  )
+					(pyg.mouse.get_pos()[0],pyg.mouse.get_pos()[1]))
 
 

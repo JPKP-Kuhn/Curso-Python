@@ -92,16 +92,27 @@ class CaixaAcoplada():
 				self.Estado=4 #Inicia a manutenção
 				self.MouseFlag=True
 				self._Controle_vazao_saida()
+				self.MouseClicked=False
+		else:
+			self.MouseFlag=True
+			
 
 	def CA_Estado3(self):	#Esvaziamento
 		self._valvula._status = "Aberta"		
 		self.SurfCaixa_esvaziamento()
 		self._alavanca._incrementa_contador()
-		
-
 
 	def CA_Estado4(self):
-		self._comporta._status = "Fechada"
+		self._valvula._status = "Aberta"
+		self.SurfCaixa_Manutencao()
+		self._alavanca._incrementa_contador()
+		self.SurfDados.blit(self.EndMaintenance, (80,5))
+		if (self.flagB3b):
+			self.MouseFlag=False
+			if (self.MouseClicked==True):
+				self.MouseFlag=True
+				self.Estado=1
+				self.MouseClicked=False
 		
 		
 	def _Controle_vazao_entrada(self):

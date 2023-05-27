@@ -44,6 +44,7 @@ class SurfDados():
 		self.OnOffImageDark = "../Imagens/BotaoOnOffDark.png"
 		self.OkImage = "../Imagens/DedoApontando.png"
 		self.EspereImage = "../Imagens/mao_espere.png"
+		self.MaoOK = "../Imagens/MaoOk.png"
 
 		#Carregando as imagens, com fundo transparente
 		self.StartImage =pyg.image.load(self.OnOffImage).convert_alpha()
@@ -51,6 +52,7 @@ class SurfDados():
 		self.StartImageDark =pyg.image.load(self.OnOffImageDark).convert_alpha()
 		self.OkImage=pyg.image.load(self.OkImage).convert_alpha()
 		self.EspereImage=pyg.image.load(self.EspereImage).convert_alpha()
+		self.EndMaintenance=pyg.image.load(self.MaoOK).convert_alpha()
 
 		reducao = 15	#Taxa de reducao da figura do botao de liga/desliga. 
 		base = self.StartImage.get_width()
@@ -61,7 +63,8 @@ class SurfDados():
 		self.Maintenance=pyg.transform.scale(self.Maintenance,(self.Maintenance.get_width()/5.5,self.Maintenance.get_height()/5.5))
 		self.StartImageDark=pyg.transform.scale(self.StartImageDark,(base/reducao,altura/reducao))
 		self.OkImage=pyg.transform.scale(self.OkImage,(self.OkImage.get_width()/12,self.OkImage.get_height()/12))		
-		self.EspereImage=pyg.transform.scale(self.EspereImage,(43,43))	
+		self.EspereImage=pyg.transform.scale(self.EspereImage,(43,43))
+		self.EndMaintenance=pyg.transform.scale(self.EndMaintenance, (43, 43))
 	
 	
 	####################### Controles Dinâmicos #####################	
@@ -151,6 +154,8 @@ class SurfDados():
 			self.SurfDados.blit(Caixa, (60, 20))
 		elif(self.Estado==4): 
 			Caixa = self.fonteBase.render('Caixa em manutenção', True, self.Branco)
+			Caixa3 = self.fonteBase.render("Manutenção realizada", True, self.Branco)
+			self.SurfDados.blit(Caixa3, (60, 73))
 		else:
 			if(self.DesativarCaixa==False): 
 				Caixa= self.fonteBase.render('Caixa em uso', True, self.Branco)

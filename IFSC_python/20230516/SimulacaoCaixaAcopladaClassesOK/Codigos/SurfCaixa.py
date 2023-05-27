@@ -73,8 +73,11 @@ class SurfCaixa():
 			pyg.draw.line(self.SurfCaixa,(0,0,255),*self.NivelAgua[(self.nlines-1)-i],width=1)
 
 	def SurfCaixa_Manutencao(self):
-		for i in range(self.VolumeCaixa):	
-			pyg.draw.line(self.SurfCaixa,(0,0,255),*self.NivelAgua[(self.nlines-1)-i],width=1)
-		
-		
-	
+		self.ControleTempoVolume+=self.tick	
+		if (self.ControleTempoVolume>self.TempoRemocaoLinha):
+			self.VolumeCaixa-=1			
+			self.ControleTempoVolume = 0
+		self.SurfCaixaLinhaDagua()
+		if(self.VolumeCaixa==0):
+			self.VolumeCaixa += 1
+
