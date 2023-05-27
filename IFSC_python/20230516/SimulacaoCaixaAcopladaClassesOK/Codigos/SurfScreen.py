@@ -15,7 +15,7 @@ class SurfScreen():
 			self.flagB1a =True
 		else: 
 			self.flagB1a = False
-		if (400<pyg.mouse.get_pos()[0]<450 and 95<pyg.mouse.get_pos()[1]<135):
+		if (400<pyg.mouse.get_pos()[0]<450 and 95<pyg.mouse.get_pos()[1]<137):
 			self.flagB3a = True
 		else:
 			self.flagB3a = False

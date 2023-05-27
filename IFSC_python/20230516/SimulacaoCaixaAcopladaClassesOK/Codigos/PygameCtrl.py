@@ -11,14 +11,14 @@ class PygameCtrl(CA.CaixaAcoplada, PygameBasics, SurfScreen, SurfDados, SurfCaix
 	def __init__(self): 
 		CA.CaixaAcoplada.__init__(self)		
 		self._pygame_basics()	#Carregamento inicial			
-		self._pygame_loop()		#Atualizacao frame a frame			
+		self._pygame_loop()		#Atualizacao frame a frame
 			
 	def _pygame_loop(self):
 		while True:
 			for event in pyg.event.get(): 
 				if event.type==pyg.QUIT:
 					pyg.quit(); sys.exit(1)	
-				if event.type==pyl.MOUSEBUTTONDOWN:	
+				if event.type==pyl.MOUSEBUTTONDOWN:
 					self.MouseClicked = True
 			
 			self.tick = self.clock.tick()	#Guarda o tempo para alterar futuramente.
@@ -32,6 +32,6 @@ class PygameCtrl(CA.CaixaAcoplada, PygameBasics, SurfScreen, SurfDados, SurfCaix
 			self.Screen.blit(self.SurfDados, (400,30))#Posicao de entrada.
 			self.Screen.blit(self.SurfCaixa, (10,10))#Posicao de entrada.		
 			self.Mouse_blit()	
-			print(pyg.mouse.get_pos())	
-			pyg.display.update()				
+			#print(pyg.mouse.get_pos())	
+			pyg.display.update()			
 			

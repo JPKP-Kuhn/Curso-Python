@@ -58,7 +58,7 @@ class SurfCaixa():
 		if(self.VolumeCaixa==self.nlines): 	#Completou as linhas, muda de estado.
 			self.Estado = 2	#Caixa está cheia. 
 	
-	def SurfCaixa_esvaziamento(self): 
+	def SurfCaixa_esvaziamento(self):
 		self.SurfDados.blit( self.EspereImage, (5,5), self.retImageOnButton )
 		self.ControleTempoVolume+=self.tick		
 		if (self.ControleTempoVolume>self.TempoRemocaoLinha):
@@ -70,7 +70,11 @@ class SurfCaixa():
 
 	def SurfCaixaLinhaDagua(self): 
 		for i in range(self.VolumeCaixa):	
-			pyg.draw.line(self.SurfCaixa,(0,0,255),*self.NivelAgua[(self.nlines-1)-i],width=1)		
+			pyg.draw.line(self.SurfCaixa,(0,0,255),*self.NivelAgua[(self.nlines-1)-i],width=1)
+
+	def SurfCaixa_Manutencao(self):
+		for i in range(self.VolumeCaixa):	
+			pyg.draw.line(self.SurfCaixa,(0,0,255),*self.NivelAgua[(self.nlines-1)-i],width=1)
 		
 		
 	

@@ -19,7 +19,9 @@ class PygameBasics():
 		ValvulaImage1Path = '../Imagens/botao1.png'
 		ValvulaImage2Path = '../Imagens/botao2.png'							
 		
-		self._Controle_tempo()	#Controle de tempo (self.cronometro inicia o relogio.)				
+		self._Controle_tempo()	#Controle de tempo (self.cronometro inicia o relogio.)
+
+		pyg.display.set_caption('Caixa Acoplada') #Título do pygame
 
 		#Controlador de mouse
 		self.MouseClicked = False	#Informa se houve clique de mouse
