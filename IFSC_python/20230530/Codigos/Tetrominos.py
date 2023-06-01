@@ -89,7 +89,7 @@ class Tetromino: #Indica o tetromino e a rotacao que sofre.
 		Tetro[-1]=Tetro[3]=Tetro1
 		self._Tetros.append(Tetro)		
 			
-	#Tetromino 6: J
+	#Tetromino 6: L verde
 	def Tetro6(self):
 		Tetro = {}			
 		#Posicao 0
