@@ -34,10 +34,6 @@ class SurfMalha():
 				
 		self.Malha.blit(self.SupTetro[(self.TempoTotalSeg//7)%7][self.TempoTotalSeg%7-3], (4*self.Trama[0], 4*self.Trama[1]) )
 
-		
-		
-		
-		
 		self.MalhaPos=(self.ScreenDim[0]/2-borda,borda)
 		
 		
