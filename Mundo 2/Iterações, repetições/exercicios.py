@@ -85,7 +85,7 @@ print(f"Nº de pessoas de menor: {menor} e pessoas de maior: {maior}")
 
 #Ex10 maior e menor peso
 maior = 0
-menor = float('inf')
+menor = float('inf') #Output for NaN or infinity
 for i in range(6):
      peso = float(input("Digite o peso: "))
      if peso > maior:
