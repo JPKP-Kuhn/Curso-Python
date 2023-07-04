@@ -4,7 +4,7 @@ genero = input('Digite seu sexo [M/F]: ')
 while genero not in 'MF':
     genero = input('Dado inválido, digite novamente [M/F]: ')
 
-#Ex2 Jogo de afdivinhação
+#Ex2 Jogo de adivinhação
 computador = randint(0, 10)
 jogada = int(input('Adivinhe o número pensado pelo computador entre 0 e 10: '))
 tentativas = 1
@@ -74,7 +74,7 @@ n = int(input('Digite um número para ter os n 1º termos da sequência de Fibon
 Natual = 1
 Nanterior = 0
 print(Nanterior, Natual, end=' ')
-contador = 0
+contador = 3
 while contador < n:
     termo = Natual +  Nanterior
     Nanterior = Natual
