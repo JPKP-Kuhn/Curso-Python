@@ -1,6 +1,5 @@
 from random import randint
 from math import factorial
-'''
 #Ex1
 sexo = input('Informe seu sexo: [M/F] ').strip().upper()[0] #Fatiamento da string
 while sexo not in 'MmFf':
@@ -31,11 +30,11 @@ n1 = int(input('Primeiro valor: '))
 n2 = int(input('Segundo valor: '))
 opcao = 0
 while opcao != 5:
-    print(    [1] somar
+    print('''    [1] somar
     [2] multiplicar
     [3] maior
     [4] novos números
-    [5] sair do programa)
+    [5] sair do programa''')
     opcao = int(input('Qual é a sua opção? '))
 
     if opcao == 1:
@@ -134,7 +133,7 @@ while num != 999:
     c += 1
     num = int(input('Digite um número inteiro [999 para parar]: '))
 print(f'Você digitou {c} números')
-'''
+
 #Ex7
 resp = 'S'
 soma = quant = media = 0
