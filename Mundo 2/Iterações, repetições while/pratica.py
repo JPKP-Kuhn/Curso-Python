@@ -34,3 +34,24 @@ while num != 0:
         else:
             impar += 1
 print(f"Você digitou {par} números pares e {impar} números ímpares")
+
+#Usar laços infinitos, usar comandos break
+count = 1
+while count <= 10:
+    print(count, '->', end='')
+    count +=1
+print('Acabou')
+
+n = soma = 0
+while True:
+    n = int(input('Digite um inteiro: '))
+    if n == 999: break
+    soma += n
+print(soma)
+
+nome = 'Joao'
+idade = 17
+salario = 13504.7
+print(f'O {nome} tem {idade} anos. Salário de {salario:.2f}') #Python 3.6+
+print('O {} tem {} anos.'.format(nome, idade)) #Python 3
+print('O %s tem %d anos' % (nome, idade)) #Python 2
