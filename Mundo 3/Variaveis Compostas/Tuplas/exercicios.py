@@ -1,5 +1,5 @@
 #Ex1 Contagem até 20
-'''
+
 contagem = (
     "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove",
     "dez", "onze", "doze", "treze", "catorze", "quinze", "dezesseis", "dezessete",
@@ -52,7 +52,7 @@ print('{:^40}'.format('LISTAGEM DE PREÇOS'))
 print('-'*40)
 print('{:<30}R${:>5}'.format(materialEscolar[0], materialEscolar[1]))
 print('{:<30}R${:>5}'.format(materialEscolar[2], materialEscolar[3]))
-'''
+
 #Ex6 Palvaras com vogais
 
 palavras = ('aprender', 'programar', 'linguagem', 'python', 'curso', 'gratis', 'computador', 'futuro', 'tecnologia', 'sequoia')
