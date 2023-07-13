@@ -27,7 +27,7 @@ print(num)
 num.append(7) # Adiciona o valor 7 no final da lista
 num.sort()
 print(num)
-num.insert(3, 0) # Adiciona o valor 0 na posição 2
+num.insert(3, 0) # Adiciona o valor 0 na posição 3
 print(num)
 print(f'Essa lista tem {len(num)} elementos')
 num.pop(0)
