@@ -1,5 +1,5 @@
 #Ex1 Entrada de dados lista
-'''
+
 lista = []
 for i in range(5):
     lista.append(int(input(f'Digite um valor para a posição {i}: ')))
@@ -27,7 +27,7 @@ while continuar == 'S':
 lista.sort()
 print(lista)
 
-#Ex3 
+#Ex3 ordenar array sem sort
 ordem = []
 for i in range(5):
     n = int(input('Digite um valor: '))
@@ -48,16 +48,15 @@ print(ordem)
 #Ex4 leitura de inputs
 cont = 'S'
 array = []
-i = c = 0
+c = 0
 while cont == 'S':
     num = int(input('Digite um valor: '))
     array.append(num)
     cont = input('Quer continuar? [S/N] ').upper().strip()[0]
-    i += 1
     if num == 5:
         c += 1
 array.sort(reverse=True)
-print(f'Foram digitado {i} valores')
+print(f'Foram digitado {len(array)} valores')
 print(f'Os valores em ordem decrescente são {array}')
 if 5 in array:
     print(f'O valor 5 faz parte da lista e foi digitado {c} vezes')
@@ -81,7 +80,7 @@ for v in lista:
         impar.append(v)
 print(f'A lista de pares é {par}')
 print(f'A lista de ímpares é {impar}')
-'''
+
 #Ex6 Expressão matemática
 expressao = []
 exp = input('Digite uma expressão matemática com parênteses: ')
