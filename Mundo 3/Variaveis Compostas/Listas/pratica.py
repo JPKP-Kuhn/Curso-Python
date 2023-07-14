@@ -56,3 +56,78 @@ c[2] = 4 # Altera o valor da posição 2 apenas da lista c
 print(f'Lista A: {a}')
 print(f'Lista B: {b}')
 print(f'Lista C: {c}')
+
+
+##Listas compostas
+
+dados = list()
+dados.append('Joao')
+dados.append(17)
+print(dados[0])
+print(dados[1])
+dados.append('Maria')
+dados.append(10)
+dados.append('Pedro')
+dados.append(12)
+pessoas = list()
+pessoas.append(dados[:]) # Cria uma cópia da lista dados
+print('-='*10)
+print(dados)
+print(pessoas)
+print('-='*10)
+print(pessoas[0])
+print(pessoas[0][0]) # Mostra o primeiro valor da primeira lista
+
+print('~'*30)
+pessoas = [['Joao', 17], ['Maria', 10], ['Pedro', 12]]
+print(pessoas[0])
+print(pessoas[0][0])
+print(pessoas[1][1])
+print(pessoas[2][0])
+
+teste = list()
+teste.append('Joao')
+teste.append(17)
+galera = list()
+galera.append(teste[:]) # Cria uma cópia da lista teste
+teste[0] = 'Maria'
+teste[1] = 22
+galera.append(teste[:]) #Sem [:] cria uma ligação entre as listas
+print(teste)
+print(galera)
+
+galera = [['Joao', 19], ['Ana', 33], ['Joaquim', 13], ['Maria', 45]]
+print(galera[0])
+print(galera[0][0])
+print(galera[2][1])
+
+#Sequência de Fibonnaci
+fib = [0, 1]
+for c in range(0, 8):
+    fib.append(fib[c] + fib[c+1])
+print(fib)
+
+for p in galera:
+    print(p)
+    print(p[0])
+    print(p[1])
+    print(f'{p[0]} tem {p[1]} anos')
+
+galera = list()
+dado = list()
+for c in range(3):
+    dado.append(input('Nome: '))
+    dado.append(int(input('Idade: ')))
+    galera.append(dado[:])
+    dado.clear() # Limpa a lista dado
+print(galera)
+
+totmai = totmen = 0
+for p in galera:
+    if p[1] >= 21:
+        print(f'{p[0]} é maior de idade')
+        totmai += 1
+    else:
+        print(f'{p[0]} é menor de idade')
+        totmen += 1
+print(f'Temos {totmai} maiores e {totmen} menores de idade')
