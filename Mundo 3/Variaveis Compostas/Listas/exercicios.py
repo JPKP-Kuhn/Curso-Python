@@ -1,5 +1,5 @@
 #Ex1 Entrada de dados lista
-'''
+
 lista = []
 for i in range(5):
     lista.append(int(input(f'Digite um valor para a posição {i}: ')))
@@ -186,7 +186,7 @@ for i in range(sorteio):
     jogos.sort()
     print(f'Jogo {i+1}: {jogos}')
     jogos.clear()
-'''
+
 #Ex6 Boletim de alunos
 resp = 'S'
 alunos = {
