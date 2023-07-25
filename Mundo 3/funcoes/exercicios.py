@@ -1,5 +1,5 @@
 #Ex1 çalculo de área
-'''
+
 def area(larg, comp):
     a = larg * comp
     print(f'A área de um terreno {larg:.2f}x{comp:.2f} é de {a:.2f}m²')
@@ -42,7 +42,7 @@ def maior(*num):
         print(i, end=', ')
     print(f'\nO maior valor é {max(num)}')
 maior(3, 4, 10, 9, 15)
-'''
+
 
 #Ex5 Soma de valores pares aleatórios
 from random import randint
