@@ -190,7 +190,7 @@ def escreva(txt):
     print('~' * (len(txt) + 2))
 
 def ajuda(com):
-    print(help(com))
+    help(com)
 
 print('SISTEMA DE AJUDA PyHELP')
 while True:
@@ -200,4 +200,4 @@ while True:
         break
     else:
         (ajuda(codigo))
-        escreva(f'Acessando o manual do comando \'{codigo}\'')
+        escreva(f'Acessando o manual do comando {codigo}')
