@@ -1,31 +1,18 @@
 #Ex1 operações básicas com números
 
 def dobro(n, monetario=False):
-    if monetario:
-        return moeda(n*2)
-    else:
-        return n*2
+    return moeda(n*2) if monetario else n*2
 
 def metade(n, monetario=False):
-    if monetario:
-        return moeda(n/2)
-    else:
-        return n/2
-
+   return moeda(n/2) if monetario else n/2
 def aumentar(n, p, monetario=False):
-    if monetario:
-        return moeda(n * (1 + p/100))
-    else:
-        return n * (1 + p/100)
+    return moeda(n * (1 + p/100)) if monetario else n * (1 + p/100)
 
 def diminuir(n, p, monetario=False):
-    if monetario:
-        return moeda(n * (1 - p/100))
-    else:
-        return n * (1 - p/100)
+    return moeda(n * (1 - p/100)) if monetario else n * (1 - p/100)
 
-def moeda(n):
-    return f'R${n:.2f}'.replace('.', ',')
+def moeda(n, moeda='R$'):
+    return f'{moeda}{n:.2f}'.replace('.', ',')
 
 def resumo(n, a=0, d=0):
     print('-'*30)
