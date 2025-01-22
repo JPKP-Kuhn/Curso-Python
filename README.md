@@ -5,6 +5,6 @@ Juntamente se encontra atividades do Curso de Python3 avançado que eu estou rea
 
 Nesse curso se encontra o material básico: ~~https://docente.ifsc.edu.br/louis.augusto/CursoPython/CursoPython.html~~
 
-[Material do curso avançado](https://docente.ifsc.edu.br/louis.augusto/CursoPython/AvancadoPython202301.htm)
+[Material do curso avançado](https://docente.ifsc.edu.br/louis.augusto/CursoPython/AvancadoPython202301.html)
 
 [Material das aulas 2024](https://docente.ifsc.edu.br/louis.augusto/CursoPython/2024/AulasPython2024.html)
